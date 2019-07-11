@@ -1,0 +1,6 @@
+- id: gitlabci_refs
+  name: Gitlab-ci refs
+  description: Rewrites refs of included gitlab-ci yml files.
+  entry: check_included_ci_ref.py
+  language: script
+  files: (\.yml)$
