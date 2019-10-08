@@ -64,7 +64,7 @@ def check_included_refs(filenames):
         base_path = os.path.dirname(filename)
         file_name = os.path.basename(filename)
         # Get current branch
-        repo = Repo(base_path)
+        repo = Repo(base_path, search_parent_directories=True)
         branch = repo.active_branch.name
         # Replace refs used in .gitlba-ci.yml
         content = None
